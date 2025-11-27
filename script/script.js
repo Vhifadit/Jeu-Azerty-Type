@@ -35,8 +35,10 @@ function lancerjeu(){
     }
     afficherResultat(score,dic1)
 }
-
-    
+let inputext=document.getElementById("inputEcriture")
+console.log(inputext)
+let buttontext=document.getElementById("btnValiderMot")
+console.log(buttontext)
 
 
 
