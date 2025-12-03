@@ -1,44 +1,37 @@
 
 
 function afficherResultat (score,dic1){
+    let zonescore=document.querySelector(".zoneScore span")
+    let nombrescore=`${score}/${dic1}`
+    zonescore.innerText=nombrescore
     console.log(score+" "+" sur"+" "+dic1)
 }
-function choisirPhrasesOuMots(){
-    let choixutilisateur=prompt("veuillez tapper'mots'si vous voulez la liste de mots et 'phrase'si vous voulez la liste de phrase")
-    while(choixutilisateur!=="mots"&& choixutilisateur!=="phrase"){
-        choixutilisateur=prompt("veuillez tapper'mots'si vous voulez la liste de mots et 'phrase'si vous voulez la liste de phrase")
-    }
-    return choixutilisateur
-}
-function lancerBoucleDeJeu(listchoix){      
-    let score=0    
-    for( i=0;i<listchoix.length;i++){
-        let motutilisateur=prompt("veuillez ecrire le mot"+" "+listchoix[i])
-        if(motutilisateur===listchoix[i]){
-            score+=1
-        } 
-    }
-    return score  
-    
-}
+
 function lancerjeu(){
-    let choix=choisirPhrasesOuMots()
     let score=0
     let dic1=0
-
-    if (choix ==="mots"){
-        score=lancerBoucleDeJeu(listmot)
-        dic1=listmot.length
-    }else{
-        score=lancerBoucleDeJeu(listePhrases)
-        dic1=listePhrases.length
-    }
+    let buttontext=document.getElementById("btnValiderMot")
+    let inputext=document.getElementById("inputEcriture")
+     buttontext.addEventListener("click",() =>{
+        console.log(inputext.value)
+     })
+    
+      
     afficherResultat(score,dic1)
 }
-let inputext=document.getElementById("inputEcriture")
+
 console.log(inputext)
-let buttontext=document.getElementById("btnValiderMot")
+
 console.log(buttontext)
+let zoneproposition=document.querySelector(".zoneProposition")
+console.log(zoneproposition)
+
+console.log(zonescore)
+
+console.log(choix)
+for(let i=0;i<choix.length;i++){
+    console.log(choix[i])
+}
 
 
 
