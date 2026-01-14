@@ -1,13 +1,15 @@
 lancerJeu()
 
-console.log(textutilisateur)
 
 
 
 
 
-let boutonradio=document.querySelectorAll(".optionSource input")
-console.log(boutonradio)
-for(let i=0;i<boutonradio.length;i++){
-    console.log(boutonradio[i])
-}
+const form=document.querySelector("form")
+console.log(form)
+ form.addEventListener("submit",(Event)=>{
+    console.log(Event)
+    Event.preventDefault()
+    console.log("il n'y a pas de rechargement de page ")
+    
+ })
