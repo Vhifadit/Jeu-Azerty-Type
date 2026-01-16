@@ -6,8 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="script/config.js"defer></script>
+    <script src="script/popup.js" defer></script>
     <script src="script/index.js" defer></script>
     <script src="script/main.js" defer></script>
+    
 </head>
     <body>
         <!-- HEADER -->
@@ -42,23 +44,27 @@
                 Votre score : <span>0</span>
             </div>
             
+            <div class="zonePartage">
+                <button>Partager</button>
+            </div>
+                
         </main>
 
         <!-- FOOTER -->
         <footer>
             @Copyright : Openclassrooms. 
         </footer>
-            <form>
-                <!-- champ nom -->
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom">
-
-                <!-- champ email -->
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Votre email">
-
-                <!-- bouton de validation -->
-                <button>Envoyer</button>
-            </form>
+        <div class="popupBackground">
+            <div class="popup">
+                <div>Partagez votre score</div>
+                <form>
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                    <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                    <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                    <button id="btnEnvoyerMail">Envoyer</button>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
